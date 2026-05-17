@@ -45,8 +45,6 @@ A free browser game — no download, no account needed. Build a robot with attri
 This project is **vibe coded** — built on weekends, shipped when it feels right.  
 No framework, no bundler. Just [Three.js](https://threejs.org), vanilla JS, and [Cloudflare Pages](https://pages.cloudflare.com).
 
-→ [View source & changelog](https://github.com/battle-of-the-bits/botb)
-
 ---
 
 📸 [@battle.of.the.bits.game](https://instagram.com/battle.of.the.bits.game) on Instagram
