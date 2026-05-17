@@ -1,0 +1,48 @@
+name: Bug Report
+description: Something broken or behaving unexpectedly
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for taking the time to report a bug!
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: A clear description of the bug.
+      placeholder: "The export button doesn't appear after the battle ends..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open botb.run
+        2. Select Spinner vs Flipper
+        3. ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device / Browser
+      multiple: true
+      options:
+        - Chrome on desktop
+        - Firefox on desktop
+        - Safari on desktop
+        - Chrome on Android
+        - Safari on iOS
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots, console errors, etc.

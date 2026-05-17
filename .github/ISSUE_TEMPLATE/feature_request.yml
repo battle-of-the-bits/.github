@@ -1,0 +1,36 @@
+name: Feature Request
+description: Suggest something new for the game
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: Got an idea? We'd love to hear it.
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What's your idea?
+      description: Describe the feature you'd like to see.
+      placeholder: "It would be cool if robots could have custom paint jobs..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why would this improve the game?
+      placeholder: "Because it would make sharing clips more personal..."
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Gameplay / combat
+        - Robot configuration
+        - Clip export / sharing
+        - Mobile experience
+        - UI / visuals
+        - Other
+    validations:
+      required: true

@@ -46,4 +46,5 @@ No framework, no bundler. Just [Three.js](https://threejs.org), vanilla JS, and 
 
 ---
 
-📸 [@battle.of.the.bits.game](https://instagram.com/battle.of.the.bits.game) on Instagram
+📸 [@battle.of.the.bits.game](https://instagram.com/battle.of.the.bits.game) on Instagram  
+🐛 [Found a bug or have a feature idea?](https://github.com/battle-of-the-bits/.github/issues/new/choose)
