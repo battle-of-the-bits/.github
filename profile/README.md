@@ -35,7 +35,6 @@ A free browser game — no download, no account needed. Build a robot with attri
 - 🔓 Robot unlocks — new types unlocked by ranked wins
 - 💻 Programmable robots — write JS to define your bot's behavior
 - 📱 PWA — installable, runs offline
-- 🌐 Landing page with localized routes (`/pt`, `/es`)
 - ⚔️ Online multiplayer (long term)
 
 ---
