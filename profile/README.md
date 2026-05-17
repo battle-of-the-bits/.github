@@ -28,9 +28,24 @@ A free browser game — no download, no account needed. Build a robot with attri
 
 ---
 
-### Built with
+### Features planned
 
-[Three.js](https://threejs.org) · [Cloudflare Pages](https://pages.cloudflare.com) · Vanilla JS · Zero build step
+- 🏟️ Public arenas — publish your robot, share the link, let anyone challenge it
+- 🏆 Global leaderboard — ranked wins, persistent robot profiles
+- 🔓 Robot unlocks — new types unlocked by ranked wins
+- 💻 Programmable robots — write JS to define your bot's behavior
+- 📱 PWA — installable, runs offline
+- 🌐 Landing page with localized routes (`/pt`, `/es`)
+- ⚔️ Online multiplayer (long term)
+
+---
+
+### How it's built
+
+This project is **vibe coded** — built on weekends, shipped when it feels right.  
+No framework, no bundler. Just [Three.js](https://threejs.org), vanilla JS, and [Cloudflare Pages](https://pages.cloudflare.com).
+
+→ [View source & changelog](https://github.com/battle-of-the-bits/botb)
 
 ---
 
