@@ -45,10 +45,10 @@ Pick from **8 colors**, tune 4 attribute sliders within a shared build budget, c
 
 ### Architecture
 
-No framework, no bundler. The entire frontend is vanilla JS + [Three.js](https://threejs.org) via CDN importmap, deployed to the edge globally.
+No framework, no bundler. The entire frontend is vanilla JS + [Three.js](https://threejs.org) via CDN importmap. The backend is TypeScript, deployed globally.
 
 ```
-botb.run  (edge-deployed frontend + API)
+botb.run  (frontend + API)
     │
     ├── Auth          OAuth 2.0 → signed JWT in HttpOnly cookie
     ├── Database      relational database — users, robots, battle history
