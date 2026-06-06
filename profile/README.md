@@ -51,7 +51,7 @@ No framework, no bundler. The entire frontend is vanilla JS + [Three.js](https:/
 botb.run  (edge-deployed frontend + API)
     │
     ├── Auth          OAuth 2.0 → signed JWT in HttpOnly cookie
-    ├── Database      relational store at the edge — users, robots, battle history
+    ├── Database      relational database — users, robots, battle history
     ├── Real-time     WebSocket rooms for live VS Friend battles
     └── Clip export   in-browser recording → MP4/WebM download
 ```
