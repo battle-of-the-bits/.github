@@ -56,8 +56,6 @@ botb.run  (frontend + API)
     └── Clip export   in-browser recording → MP4/WebM download
 ```
 
-Two environments run in parallel — **production** and **staging** — each with their own database. Migrations are applied independently per environment. No build step: a `git push` to `main` is a full deploy.
-
 ---
 
 This project is **vibe coded** — built on weekends, shipped when it feels right.
