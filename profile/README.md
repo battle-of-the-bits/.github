@@ -60,6 +60,18 @@ botb.run  (Cloudflare Pages + Workers)
 
 Migrations are SQL files applied per environment with Wrangler. Two environments: `staging` (preview Workers) and `production` (botb.run).
 
+#### Implementation highlights
+
+**Composite canvas recording** — the exported clip merges two canvas contexts: the WebGL frame from Three.js and a 2D canvas HUD (bot names, HP bars, winner banner) composited via `drawImage` on every `requestAnimationFrame` tick. `preserveDrawingBuffer: true` is required on the WebGL renderer — without it, `captureStream()` captures black frames.
+
+**Deterministic cross-platform simulation** — battle outcomes are fully reproducible. Sin/cos arguments are normalized to `[0, 2π]` to eliminate floating-point divergence across Chrome, Safari, Firefox, and different operating systems. The simulation runs on the main thread at 60 fps with no replay system — what you watch is the live result.
+
+**Stat-driven bot AI with physics** — each robot runs an AI loop driven entirely by its attribute sliders. Fight style affects energy drain and movement speed (`aggressive`: 1.5× drain / 1.1× speed; `counter`: waits for the opponent, breaks after 3.5 s stalemate). Approach angle is computed from the opponent's facing vector. Flipper attacks launch the opponent airborne with gravity (20 units/s²), tumble rotation, and a 0.65 s land stun.
+
+**Durable Objects for VS Friend rooms** — each live battle room is a single Durable Object holding both WebSocket connections. No dedicated server, no shared state. The room is created on demand and destroyed when both players disconnect.
+
+Also: **7-viewport Playwright test suite** (iPhone SE → Full HD) with guardrails that enforce canvas coverage, zero JS errors, HUD bounds, and virtual controls behavior on every commit. **PWA** — service worker cache-first strategy, installable on Android and iOS, fully offline after first load. **i18n** — EN / PT / ES with browser language auto-detection.
+
 ---
 
 This project is **vibe coded** — built on weekends, shipped when it feels right.
