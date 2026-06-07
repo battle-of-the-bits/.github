@@ -45,16 +45,20 @@ Pick from **8 colors**, tune 4 attribute sliders within a shared build budget, c
 
 ### Architecture
 
-No framework, no bundler. The entire frontend is vanilla JS + [Three.js](https://threejs.org) via CDN importmap. The backend is TypeScript, deployed globally.
+No framework, no bundler. The entire frontend is vanilla JS + [Three.js](https://threejs.org) via CDN importmap — a git push to `main` is a full deploy, no build step.
+
+The backend is TypeScript running on **Cloudflare Workers** at the edge, with a **Cloudflare D1** (SQLite) relational database and **Durable Objects** for stateful WebSocket rooms.
 
 ```
-botb.run  (frontend + API)
+botb.run  (Cloudflare Pages + Workers)
     │
-    ├── Auth          OAuth 2.0 → signed JWT in HttpOnly cookie
-    ├── Database      relational database — users, robots, battle history
-    ├── Real-time     WebSocket rooms for live VS Friend battles
-    └── Clip export   in-browser recording → MP4/WebM download
+    ├── Auth          Google OAuth 2.0 → signed JWT in HttpOnly cookie
+    ├── Database      Cloudflare D1 (SQLite) — users, robots, battle history
+    ├── Real-time     Durable Objects — one WS room per battle, stateful
+    └── Clip export   canvas.captureStream() → MediaRecorder → MP4/WebM
 ```
+
+Migrations are SQL files applied per environment with Wrangler. Two environments: `staging` (preview Workers) and `production` (botb.run).
 
 ---
 
